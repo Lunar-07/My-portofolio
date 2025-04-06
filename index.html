@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio Arisman Jusman</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script>
     if (localStorage.getItem('theme') === 'dark') {
       document.documentElement.classList.add('dark');
@@ -34,27 +35,42 @@
       ['name', 'bio1', 'bio2'].forEach(loadContent);
     }
   </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+<body class="bg-gradient-to-br from-gray-100 to-blue-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100">
+
+  <!-- Dark Mode Toggle -->
   <div class="fixed top-4 right-4 z-50">
-    <button onclick="toggleDarkMode()" class="bg-gray-300 dark:bg-gray-700 p-2 rounded-full shadow hover:scale-105 transition">
+    <button onclick="toggleDarkMode()" class="bg-white dark:bg-gray-700 p-2 rounded-full shadow hover:scale-105 transition">
       <img id="darkModeIcon" src="https://img.icons8.com/ios-filled/24/000000/sun--v1.png" alt="Toggle Dark Mode">
     </button>
   </div>
+
+  <!-- Hero Section -->
   <main class="min-h-screen flex items-center justify-center p-6">
-    <div class="text-center">
+    <div class="text-center max-w-2xl bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-60 backdrop-blur-md p-10 rounded-3xl shadow-xl">
+      <div class="mb-6">
+        <img src="https://img.icons8.com/fluency/96/user-male-circle.png" class="mx-auto rounded-full" alt="Avatar">
+      </div>
       <h1 id="name" contenteditable="true" oninput="saveContent('name')" class="text-4xl font-bold mb-4">Arisman Jusman</h1>
       <p id="bio1" contenteditable="true" oninput="saveContent('bio1')" class="text-lg mb-2">Mahasiswa Sastra Inggris Universitas Halu Oleo</p>
       <p id="bio2" contenteditable="true" oninput="saveContent('bio2')" class="text-lg mb-6">Sedang belajar menjadi Web Developer</p>
-      <nav class="space-x-4">
-        <a href="projects.html" class="text-blue-600 dark:text-blue-300 hover:underline">Projek</a>
-        <a href="gallery.html" class="text-blue-600 dark:text-blue-300 hover:underline">Galeri</a>
-        <a href="contact.html" class="text-blue-600 dark:text-blue-300 hover:underline">Kontak</a>
+      <nav class="flex justify-center space-x-6">
+        <a href="projects.html" class="text-blue-600 dark:text-blue-300 hover:underline font-medium">Projek</a>
+        <a href="gallery.html" class="text-blue-600 dark:text-blue-300 hover:underline font-medium">Galeri</a>
+        <a href="contact.html" class="text-blue-600 dark:text-blue-300 hover:underline font-medium">Kontak</a>
       </nav>
     </div>
   </main>
+
+  <!-- Footer -->
   <footer class="text-center bg-gray-800 dark:bg-gray-950 text-white p-4">
     &copy; 2025 Lunar🌙. Mahasiswa Sastra Inggris UHO 2020.
   </footer>
+
 </body>
 </html>
